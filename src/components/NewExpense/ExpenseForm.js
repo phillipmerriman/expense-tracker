@@ -58,7 +58,7 @@ const ExpenseForm = (props) => {
             step="0.01"
             value={enteredAmount}
             onChange={amountChangeHandler}
-            />
+          />
         </div>
         <div className="new-expense__control">
           <label>Date</label>
@@ -72,7 +72,9 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
-        <button type="submit">Cancel</button>
+        <button type="button" onClick={props.onCancel}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
